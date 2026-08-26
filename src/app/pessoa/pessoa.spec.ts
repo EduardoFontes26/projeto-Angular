@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 })
 export class PessoaComponent {
   nome: string = 'Eduardo';
-  curso: string = 'Ciência da Computação';
+  curso: string = 'Análise e desenvolvimento de sistemas';
   email: string = 'dudufontes01.ef@gmail.com';
 }

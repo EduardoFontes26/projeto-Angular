@@ -1,0 +1,22 @@
+.card-pessoa {
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card-pessoa h2 {
+  margin-top: 0;
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.card-pessoa p {
+  color: #334155;
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+}

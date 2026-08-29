@@ -1,22 +1,60 @@
-.card-pessoa {
-  max-width: 400px;
-  padding: 1.5rem;
-  border-radius: 12px;
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+.container {
+  padding: 1rem;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
-.card-pessoa h2 {
+.lista-pessoas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card-pessoa {
+  width: 280px;
+  padding: 1.25rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.card-pessoa.inativo {
+  background-color: #f8fafc;
+  opacity: 0.7;
+}
+
+.card-pessoa h3 {
   margin-top: 0;
   color: #0f172a;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid #38bdf8;
   padding-bottom: 0.5rem;
 }
 
 .card-pessoa p {
   color: #334155;
-  margin: 0.75rem 0;
-  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.card-pessoa.inativo .status {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.mensagem-vazia {
+  color: #64748b;
+  font-style: italic;
 }

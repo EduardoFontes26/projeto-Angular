@@ -1,6 +1,24 @@
-<div class="card-pessoa">
-  <h2>Dados da Pessoa</h2>
-  <p><strong>Nome:</strong> {{ nome }}</p>
-  <p><strong>Curso:</strong> {{ curso }}</p>
-  <p><strong>E-mail:</strong> {{ email }}</p>
+<div class="container">
+  <h2>Lista de Pessoas</h2>
+
+  <div class="lista-pessoas">
+    @for (pessoa of pessoas; track pessoa.id) {
+      <div class="card-pessoa" [class.inativo]="!pessoa.ativo">
+        <h3>{{ pessoa.nome }}</h3>
+        <p><strong>Curso:</strong> {{ pessoa.curso }}</p>
+        <p><strong>E-mail:</strong> {{ pessoa.email }}</p>
+        <p><strong>Vínculo:</strong> {{ pessoa.vinculo }}</p>
+        
+        @if (pessoa.telefone) {
+          <p><strong>Telefone:</strong> {{ pessoa.telefone }}</p>
+        } @else {
+          <p><em>Sem telefone cadastrado</em></p>
+        }
+
+        <span class="status">{{ pessoa.ativo ? 'Ativo' : 'Inativo' }}</span>
+      </div>
+    } @empty {
+      <p class="mensagem-vazia">Nenhuma pessoa encontrada.</p>
+    }
+  </div>
 </div>

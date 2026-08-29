@@ -25,7 +25,7 @@ export class PessoaComponent {
       curso: 'Sistemas de Informação',
       email: 'maria@email.com',
       ativo: true,
-      vinculo: 'aluno' // Sem telefone
+      vinculo: 'aluno'
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ export class PessoaComponent {
       curso: 'Análise de Sistemas',
       email: 'ana@email.com',
       ativo: true,
-      vinculo: 'servidor' // Sem telefone
+      vinculo: 'servidor'
     }
   ];
 }

@@ -1,1 +1,182 @@
 /* You can add global styles to this file, and also import other style files */
+app-calourada-manager > div > header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(11, 13, 23, 0.88);
+  backdrop-filter: blur(16px);
+}
+
+app-calourada-manager > div > header > div {
+  display: flex;
+  min-height: 68px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+app-calourada-manager > div > header > div > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+app-calourada-manager > div > header > div > div:first-child span:last-child {
+  color: #d8b4fe;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+app-calourada-manager nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+app-calourada-manager nav button {
+  padding: 9px 13px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #cbd5e1;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+app-calourada-manager nav button:hover {
+  border-color: rgba(167, 139, 250, 0.2);
+  color: #fff;
+  background: rgba(139, 92, 246, 0.12);
+}
+
+app-calourada-manager main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 42px 24px 64px;
+}
+
+app-calourada-manager .participants-list {
+  overflow: hidden;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(24, 25, 43, 0.98), rgba(15, 17, 29, 0.98));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+}
+
+app-calourada-manager .participants-list__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 26px 28px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.17);
+}
+
+app-calourada-manager .participants-list__heading h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+}
+
+app-calourada-manager .participants-list__heading p {
+  margin: 7px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+app-calourada-manager .participants-list__count {
+  flex: 0 0 auto;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: #ddd6fe;
+  background: rgba(139, 92, 246, 0.12);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+app-calourada-manager .participants-list__table-wrap {
+  overflow-x: auto;
+}
+
+app-calourada-manager .participants-list table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+app-calourada-manager .participants-list th {
+  padding: 13px 18px;
+  color: #a5b4fc;
+  background: rgba(8, 10, 19, 0.6);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+app-calourada-manager .participants-list td {
+  padding: 15px 18px;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+app-calourada-manager .participants-list tbody tr:hover {
+  background: rgba(139, 92, 246, 0.06);
+}
+
+app-calourada-manager .participants-list .participants-list__name {
+  color: #fff;
+  font-weight: 650;
+}
+
+app-calourada-manager .participants-list .participants-list__empty {
+  padding: 44px 18px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+app-calourada-manager nav button:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  app-calourada-manager > div > header > div {
+    padding: 10px 16px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  app-calourada-manager nav {
+    width: 100%;
+    gap: 4px;
+  }
+
+  app-calourada-manager nav button {
+    flex: 1;
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  app-calourada-manager main {
+    padding: 24px 14px 40px;
+  }
+
+  app-calourada-manager .participants-list__heading {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px;
+  }
+}

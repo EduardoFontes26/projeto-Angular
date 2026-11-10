@@ -1,0 +1,86 @@
+<main class="participant-page">
+  <section class="participant-card">
+    <header class="participant-card__header">
+      <span class="participant-card__eyebrow">CADASTRO DE EVENTO</span>
+      <h1>Dados do participante</h1>
+      <p>Preencha seus dados para continuar com a inscrição.</p>
+    </header>
+
+    <form #formulario="ngForm" (ngSubmit)="cadastrarParticipante()" class="participant-form">
+      <div class="participant-form__field">
+        <label for="nome">Nome completo</label>
+        <input
+          id="nome"
+          type="text"
+          name="nome"
+          [(ngModel)]="participante.nome"
+          placeholder="Ex.: Ana Oliveira"
+          autocomplete="name"
+          required />
+      </div>
+
+      <div class="participant-form__grid">
+        <div class="participant-form__field">
+          <label for="dataNascimento">Data de nascimento</label>
+          <input
+            id="dataNascimento"
+            type="date"
+            name="dataNascimento"
+            [(ngModel)]="participante.dataNascimento"
+            autocomplete="bday"
+            required />
+        </div>
+
+        <div class="participant-form__field">
+          <label for="cpf">CPF</label>
+          <input
+            id="cpf"
+            type="text"
+            name="cpf"
+            [(ngModel)]="participante.cpf"
+            placeholder="000.000.000-00"
+            autocomplete="off"
+            inputmode="numeric"
+            required />
+        </div>
+      </div>
+
+      <div class="participant-form__field">
+        <label for="email">E-mail</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          [(ngModel)]="participante.email"
+          placeholder="voce@email.com"
+          autocomplete="email"
+          required />
+      </div>
+
+      <div class="participant-form__field">
+        <label for="telefone">Telefone</label>
+        <input
+          id="telefone"
+          type="tel"
+          name="telefone"
+          [(ngModel)]="participante.telefone"
+          placeholder="(00) 00000-0000"
+          autocomplete="tel"
+          required />
+      </div>
+
+      <button class="participant-form__submit" type="submit" [disabled]="formulario.invalid">
+        Cadastrar participante
+      </button>
+    </form>
+
+    @if (participanteCadastrado; as cadastrado) {
+      <p class="participant-card__success" role="status">
+        Cadastro preenchido para {{ cadastrado.nome }}.
+      </p>
+      <a class="participant-card__list-link" routerLink="/calourada" [queryParams]="{ aba: 'participantes' }">
+        Ver lista de participantes
+      </a>
+    }
+  </section>
+</main>

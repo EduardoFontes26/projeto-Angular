@@ -1,12 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Pessoa } from './pessoa.model';
 
 @Component({
   selector: 'app-pessoa',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pessoa.html',
-  styleUrl: './pessoa.css'
+  styleUrls: ['./pessoa.css']
 })
 export class PessoaComponent {
   pessoas: Pessoa[] = [

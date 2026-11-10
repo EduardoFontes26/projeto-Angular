@@ -1,0 +1,205 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  color: #f8fafc;
+  background:
+    radial-gradient(ellipse at 50% -20%, rgba(124, 58, 237, 0.2), transparent 55%),
+    #090b13;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+:host > div {
+  min-height: 100vh;
+}
+
+.event-create {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 42px);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(24, 25, 43, 0.98), rgba(15, 17, 29, 0.98));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35), 0 0 50px rgba(124, 58, 237, 0.08);
+}
+
+.event-create__intro {
+  margin-bottom: 30px;
+}
+
+.event-create__eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #c4b5fd;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.event-create__intro h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.event-create__intro p,
+.event-create__lots-header p {
+  margin: 8px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.event-create__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-create__form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #dbe3f0;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.event-create__form input,
+.event-create__form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #303448;
+  border-radius: 12px;
+  outline: none;
+  padding: 12px 14px;
+  color: #f8fafc;
+  background: rgba(8, 10, 19, 0.72);
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.event-create__form input {
+  min-height: 46px;
+}
+
+.event-create__form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.event-create__form input::placeholder,
+.event-create__form textarea::placeholder {
+  color: #64748b;
+}
+
+.event-create__form input:focus,
+.event-create__form textarea:focus {
+  border-color: #a78bfa;
+  background: rgba(8, 10, 19, 0.95);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.16);
+}
+
+.event-create__field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.event-create__lots {
+  margin-top: 2px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(148, 163, 184, 0.17);
+}
+
+.event-create__lots-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.event-create__lots-header h3 {
+  margin: 0;
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.event-create__lots-header p {
+  font-size: 12px;
+}
+
+.event-create__add-lot {
+  flex: 0 0 auto;
+  padding: 9px 12px;
+  border: 1px solid rgba(167, 139, 250, 0.28);
+  border-radius: 10px;
+  color: #ddd6fe;
+  background: rgba(139, 92, 246, 0.12);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.event-create__add-lot:hover {
+  border-color: rgba(167, 139, 250, 0.55);
+  background: rgba(139, 92, 246, 0.22);
+}
+
+.event-create__lot-row {
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.event-create__lot-row input {
+  padding: 11px 12px;
+  font-size: 13px;
+}
+
+.event-create__submit {
+  width: 100%;
+  min-height: 50px;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(100deg, #7c3aed, #c026d3);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.24);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+.event-create__submit:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+  box-shadow: 0 14px 30px rgba(124, 58, 237, 0.34);
+}
+
+.event-create__submit:focus-visible,
+.event-create__add-lot:focus-visible,
+:host nav button:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .event-create__field-grid,
+  .event-create__lot-row {
+    grid-template-columns: 1fr;
+  }
+
+  .event-create__lots-header {
+    align-items: flex-start;
+  }
+
+}

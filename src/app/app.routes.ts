@@ -1,11 +1,9 @@
 import { Routes } from '@angular/router';
-import { Home } from './home/home';
-import { PessoaComponent } from './pessoa/pessoa';
-import { NaoEncontrada } from './nao-encontrada/nao-encontrada';
+import { CalouradaManagerComponent } from './calourada/calourada.component';
+import { ParticipanteComponent } from './participante/participante.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: Home },
-  { path: 'pessoa', component: PessoaComponent },
-  { path: '**', component: NaoEncontrada }
+  { path: '', redirectTo: 'calourada', pathMatch: 'full' },
+  { path: 'calourada', component: CalouradaManagerComponent },
+  { path: 'participante', component: ParticipanteComponent }
 ];
